@@ -89,6 +89,14 @@ export default function Home() {
             <div className="mt-6 p-4 bg-white border rounded">
               <h2 className="font-semibold mb-2">🪄 Edited Text:</h2>
               <pre className="whitespace-pre-wrap">{editedText}</pre>
+              <a
+  href={`data:text/plain;charset=utf-8,${encodeURIComponent(editedText)}`}
+  download="edited-document.txt"
+  className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+>
+  ⬇️ Download Edited Text
+</a>
+
             </div>
           )}
         </div>
